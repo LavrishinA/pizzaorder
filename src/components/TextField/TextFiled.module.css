@@ -1,0 +1,23 @@
+.block {
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 8px 16px;
+}
+
+.input {
+    width: 100%;
+    max-width: 250px;
+    padding: 8px;
+    background-color: #FFF394;
+    border-radius: 8px;
+    border: 2px solid #FFDC00;
+
+    outline-color: #9E6C00;
+
+    &::placeholder {
+        color: #9E6C00;
+    }
+}
