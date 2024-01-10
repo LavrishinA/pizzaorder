@@ -1,0 +1,40 @@
+.Button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    background-color: #FFDC00;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        animation: shadow-drop-2-center .4s cubic-bezier(.25, .46, .45, .94) both
+    }
+
+    &:active {
+
+            animation: scale-down-center .4s cubic-bezier(.25, .46, .45, .94) both
+    }
+
+}
+
+@keyframes shadow-drop-2-center {
+    0% {
+        transform: translateZ(0);
+        box-shadow: 0 0 0 0 transparent
+    }
+    100% {
+        transform: translateZ(50px);
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .35)
+    }
+}
+
+@keyframes scale-down-center {
+    0% {
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(.7)
+    }
+}

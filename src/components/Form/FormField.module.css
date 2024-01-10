@@ -1,0 +1,53 @@
+.FormRoot {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.FormField {
+    width: 100%;
+    align-self: start;
+    position: relative;
+    display: flex;
+
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.Control {
+
+    flex-grow: .7;
+    padding: 8px;
+    background-color: #FFF394;
+    border-radius: 8px;
+    border: none;
+    outline-color: #8D8D8D;
+
+    &::placeholder {
+        color: #9E6C00;
+    }
+}
+
+.Control[data-invalid] {
+    color: tomato;
+}
+
+.FormLabel {
+    white-space: nowrap;
+}
+
+.Message {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: tomato;
+    font-size: 14px;
+}
+
+.FormSubmit {
+
+}

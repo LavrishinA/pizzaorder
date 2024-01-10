@@ -1,11 +1,5 @@
 function App() {
-
-
-  return (
-    <>
-        Hello pizza
-    </>
-  )
+    return <></>
 }
 
 export default App
