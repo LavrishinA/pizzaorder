@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react"
 import { MenuItem } from "./MenuItem.tsx"
 import "../../../index.css"
 const meta: Meta<typeof MenuItem> = {
-    title: "Controls",
+    title: "Widget/MenuItem",
     component: MenuItem,
     parameters: {
         layout: "fullscreen",
