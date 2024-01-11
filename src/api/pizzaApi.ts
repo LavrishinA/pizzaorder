@@ -48,18 +48,18 @@ export type NewOrder = {
     cart: PizzaItem[]
 }
 
-export type Cart = {
+export type CartItem = {
     pizzaId: number
     name: string
     quantity: number
     unitPrice: number
     totalPrice: number
-    addIngredients: unknown[]
-    removeIngredients: unknown[]
+    addIngredients?: unknown[]
+    removeIngredients?: unknown[]
 }
 
 export type NewOrderRes = Omit<NewOrder, "cart"> & {
-    cart: Cart[]
+    cart: CartItem[]
     status: string
     id: string
     createdAt: string
