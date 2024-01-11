@@ -22,8 +22,7 @@
 
   },
   "include": [
-    "src",
-    "node_modules/vitest/globals.d.ts"
+    "src"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
