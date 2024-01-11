@@ -1,7 +1,6 @@
 .Button {
     display: inline-block;
     border: none;
-    padding: 1rem 2rem;
     background-color: #FFDC00;
     border-radius: 50px;
     font-weight: bold;
@@ -14,9 +13,22 @@
 
     &:active {
 
-            animation: scale-down-center .4s cubic-bezier(.25, .46, .45, .94) both
+        animation: scale-down-center .4s cubic-bezier(.25, .46, .45, .94) both
     }
 
+}
+
+.PrimaryButton {
+    padding: 1rem 2rem;
+}
+
+.ButtonRound {
+    width: 32px;
+    height: 32px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes shadow-drop-2-center {
