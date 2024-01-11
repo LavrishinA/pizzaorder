@@ -1,13 +1,32 @@
 import { Button } from "../Button/Button.tsx"
 import s from "./SetQuantity.module.css"
-import { FC } from "react"
+import { FC, useState } from "react"
 
 export const SetQuantity: FC<SetQuantityProps> = (props) => {
+    const [clicked, setClicked] = useState(false)
+
+    const clickHandler = (clickFunction: () => void) => {
+        setClicked(true)
+        clickFunction()
+    }
+
     return (
         <div className={s.Container}>
-            <Button name={"-"} disabled={props.quantity === 1} variant={"round"} onClick={props.onDecrease} />
-            <p className={s.Quantity}>{props.quantity}</p>
-            <Button name={"+"} disabled={props.quantity === 5} variant={"round"} onClick={props.onIncrease} />
+            <Button
+                name={"-"}
+                disabled={props.quantity === 1}
+                variant={"round"}
+                onClick={() => clickHandler(props.onDecrease)}
+            />
+            <p onAnimationEnd={() => setClicked(false)} className={`${clicked ? s.animate : null}`}>
+                {props.quantity}
+            </p>
+            <Button
+                name={"+"}
+                disabled={props.quantity === 5}
+                variant={"round"}
+                onClick={() => clickHandler(props.onIncrease)}
+            />
         </div>
     )
 }
