@@ -3,7 +3,7 @@
     align-items: center;
     gap: 1rem;
 
-    background: #FFF394 url("src/assets/MenuItem.svg") center;
+    background: #FFF394 url("src/assets/MenuItem.png") center;
     background-size: contain;
 }
 
