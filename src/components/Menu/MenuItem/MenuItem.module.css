@@ -1,0 +1,43 @@
+.Card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    background: #FFF394 url("src/assets/MenuItem.svg") center;
+    background-size: contain;
+}
+
+.Container {
+    width: 250px;
+    border-radius: 6px;
+    overflow: hidden;
+
+
+}
+
+.Description {
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.Price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #3E9B4F;
+}
+
+.Price span {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
+
+.H3 {
+    font-size: 26px;
+    font-weight: bold;
+}
+

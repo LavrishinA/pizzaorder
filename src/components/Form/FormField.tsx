@@ -16,7 +16,7 @@ export const FormField = () => {
                 </Form.Message>
             </TextField>
             <Form.Submit asChild>
-                <Button name={"Create user"} />
+                <Button name={"Create user"} variant={"primary"} />
             </Form.Submit>
         </Form.Root>
     )
