@@ -7,9 +7,6 @@ const meta: Meta<typeof Button> = {
     parameters: {
         layout: "fullscreen",
     },
-    args: {
-        name: "Create user",
-    },
 }
 
 export default meta
@@ -17,7 +14,7 @@ type Story = StoryObj<typeof Button>
 
 export const PrimaryButton: Story = {
     args: {
-        ...meta.args,
+        name: "Create User",
         variant: "primary",
     },
 }
@@ -27,6 +24,4 @@ export const RoundIconButton: Story = {
         variant: "round",
         name: "+",
     },
-
-    render: () => <Button name={"+"} variant={"round"} />,
 }
