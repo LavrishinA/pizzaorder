@@ -1,9 +1,9 @@
-import { FC } from "react"
-import { PizzaItem } from "../../../api/pizzaApi.ts"
 import * as AspectRatio from "@radix-ui/react-aspect-ratio"
 import s from "./MenuItem.module.css"
+import {PizzaItem} from "api/pizzaApi.ts";
 
-export const MenuItem: FC<PizzaItem> = (props) => {
+
+export const MenuItem = (props: PizzaItem )=> {
     return (
         <div className={s.Card}>
             <div className={s.Container}>
