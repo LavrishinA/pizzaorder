@@ -1,16 +1,16 @@
 import {useLoaderData} from "react-router-dom";
 import {PizzaApi, PizzaItem} from "../../api/pizzaApi.ts";
-import {MenuItem} from "../../components";
 import s from "./Menu.module.css"
+import {MenuItem} from "../../components";
 
 
 export const Menu = () => {
     const menu = useLoaderData() as PizzaItem[]
 
     return (
-        <div className={s.Menu}>
+        <section className={s.Menu}>
             {menu.map((item) => <MenuItem key={item.id} {...item}/>)}
-        </div>
+        </section>
     );
 };
 

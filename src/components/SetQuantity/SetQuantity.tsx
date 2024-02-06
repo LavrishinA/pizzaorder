@@ -12,6 +12,7 @@ export const SetQuantity = (props: SetQuantityProps) => {
     const [clicked, setClicked] = useState(false)
 
     const clickHandler = (clickFunction: () => void) => {
+
         setClicked(true)
         clickFunction()
     }
