@@ -1,7 +1,6 @@
-import { FC } from "react"
 import s from "./Button.module.css"
 
-export const Button: FC<ButtonProps> = ({ name, variant, onClick, disabled }) => {
+export const Button = ({ name, variant, onClick, disabled }: ButtonProps) => {
     return (
         <button
             onClick={onClick}

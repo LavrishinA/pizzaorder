@@ -6,7 +6,7 @@ const instance = axios.create({
 
 export class PizzaApi {
     static getMenu() {
-        return instance.get<RestaurantRes<PizzaItem[]>, AxiosResponse<RestaurantRes<PizzaItem[]>>>("/menuu")
+        return instance.get<RestaurantRes<PizzaItem[]>, AxiosResponse<RestaurantRes<PizzaItem[]>>>("/menu")
     }
 
     static createOrder(order: NewOrder) {

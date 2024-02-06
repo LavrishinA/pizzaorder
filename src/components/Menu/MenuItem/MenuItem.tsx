@@ -1,6 +1,8 @@
 import * as AspectRatio from "@radix-ui/react-aspect-ratio"
 import s from "./MenuItem.module.css"
-import {PizzaItem} from "api/pizzaApi.ts";
+import {PizzaItem} from "../../../api/pizzaApi.ts";
+import {SetQuantity} from "../../SetQuantity/SetQuantity.tsx";
+
 
 
 export const MenuItem = (props: PizzaItem )=> {
@@ -22,7 +24,7 @@ export const MenuItem = (props: PizzaItem )=> {
             </div>
             <div className={s.Description}>
                 <h3 className={s.H3}> {props.name}</h3>
-                <ul style={{ display: "flex", gap: ".5rem", fontSize: "20px" }}>
+                <ul >
                     <span>Ingredients:</span>
                     {props.ingredients.map((ing) => (
                         <li>{ing}</li>
@@ -33,7 +35,10 @@ export const MenuItem = (props: PizzaItem )=> {
                     {props.unitPrice}&#36;
                 </p>
             </div>
+            <div style={{marginLeft: "auto", padding: "8px"}}>
+                <SetQuantity quantity={1} onIncrease={() => {}} onDecrease={() => {}}/>
+            </div>
+
         </div>
     )
 }
-0

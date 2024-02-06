@@ -1,14 +1,17 @@
 .Card {
+    padding: 1px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
-
     background: #FFF394 url("src/assets/MenuItem.png") center;
     background-size: contain;
+    border-radius: 8px;
+    border: 2px solid #9E6C00;
 }
 
 .Container {
-    width: 250px;
+    flex-basis: 30%;
     border-radius: 6px;
     overflow: hidden;
 
@@ -17,27 +20,53 @@
 
 .Description {
     align-self: stretch;
-
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 
 }
 
+.Card ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    font-size: 20px;
+}
+
+.Card li, .Card span  {
+    font-size: clamp(12px, 5vw, 18px);
+}
+
 .Price {
-    font-size: 24px;
+    font-size: clamp(16px, 5vw, 24px);
     font-weight: 600;
     color: #3E9B4F;
 }
 
+
 .Price span {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 800;
     color: black;
 }
 
 .H3 {
-    font-size: 26px;
+    font-size: clamp(18px, 5vw, 26px);
     font-weight: bold;
 }
 
+@media (max-width: 768px) {
+    .Description {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    .Card ul {
+        white-space: nowrap;
+        gap: 1px;
+       flex-direction: column;
+    }
+}

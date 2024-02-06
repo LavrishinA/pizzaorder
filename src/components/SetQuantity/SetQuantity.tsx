@@ -1,8 +1,14 @@
-import { Button } from "../Button/Button.tsx"
+import {Button} from "../Button/Button.tsx"
 import s from "./SetQuantity.module.css"
-import { FC, useState } from "react"
+import {useState} from "react"
 
-export const SetQuantity: FC<SetQuantityProps> = (props) => {
+type SetQuantityProps = {
+    quantity: number
+    onIncrease: () => void
+    onDecrease: () => void
+}
+
+export const SetQuantity = (props: SetQuantityProps) => {
     const [clicked, setClicked] = useState(false)
 
     const clickHandler = (clickFunction: () => void) => {
@@ -31,8 +37,4 @@ export const SetQuantity: FC<SetQuantityProps> = (props) => {
     )
 }
 
-type SetQuantityProps = {
-    quantity: number
-    onIncrease: () => void
-    onDecrease: () => void
-}
+

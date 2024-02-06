@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react"
+import {ReactNode} from "react"
 import * as Form from "@radix-ui/react-form"
 import s from "./FormField.module.css"
 
@@ -9,7 +9,7 @@ type TextFieldProps = {
     placeholder: string
 }
 
-export const TextField: FC<TextFieldProps> = ({ children, ...props }) => {
+export const TextField = ({children, ...props}: TextFieldProps) => {
     return (
         <Form.Field className={s.FormField} name={props.name}>
             <Form.Label className={s.FormLabel}>Your Name</Form.Label>
